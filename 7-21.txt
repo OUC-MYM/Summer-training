@@ -1,0 +1,14 @@
+5 / 36 Problem A POJ 2488   A Knight's Journey   
+ 0 / 9 Problem B POJ 1190  …˙»’µ∞∏‚   
+  Problem C POJ 1376   Robot   
+  Problem D POJ 1033   Defragment   
+ 1 / 7 Problem E POJ 2688   Cleaning Robot  
+
+
+
+
+9 / 32 Problem A CodeForces 342A   Xenia and Divisors   
+ 1 / 5 Problem B CodeForces 342B   Xenia and Spies   
+ 4 / 33 Problem C CodeForces 342C   Cupboard and Balloons   
+ 7 / 21 Problem D CodeForces 445A   DZY Loves Chessboard   
+ 2 / 10 Problem E CodeForces 445B   DZY Loves Chemistry  

@@ -1,0 +1,21 @@
+搜索（图）
+bfs，dfs
+
+bfs，队列	
+queue<int>q;		q.empty()空true;	q.push();	q.front();	q.pop();
+
+dfs，递归
+
+记忆化搜索
+博弈树
+整数划分
+
+
+
+4 / 17 Problem A HDU 1078   FatMouse and Cheese   DFS	http://blog.ouc-mengyuming.com.cn/2015/05/27/poj-1088-%E6%BB%91%E9%9B%AA/
+ 1 / 18 Problem B HDU 2364   Escape               BFS   vis[][][];方向
+ 6 / 24 Problem C HDU 1548   A strange lift       
+ 1 / 6 Problem D HDU 2209  翻纸牌游戏   
+ 1 / 8 Problem E HDU 1455   Sticks  
+
+
