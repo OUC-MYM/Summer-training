@@ -33,7 +33,10 @@ void dfs(int sum, int ans, int cnt)
         {
             vis[i]=1;
             dfs(0,ans,cnt+1);
+            vis[i]=0;
         }
+        if(sum==0)
+            return;
     }
     return;
 }
@@ -63,9 +66,10 @@ int main()
         {
             cin >> n[i];
             all=all+n[i];
-            MAXX=max(MAXX,n[i]);
+
         }
         sort(n,n+T);
+        MAXX=n[T-1];
         cout << solv() << endl;
     }
     return 0;
