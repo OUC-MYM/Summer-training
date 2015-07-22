@@ -1,0 +1,18 @@
+枚举
+
+贪心
+
+模拟
+
+递推
+
+递归
+
+数据结构  队列、栈
+
+
+ 12 / 44 Problem A POJ 1321  棋盘问题   
+ 2 / 15 Problem B POJ 1426   Find The Multiple   
+ 1 / 28 Problem C POJ 1020   Anniversary Cake   
+ 2 / 3 Problem D POJ 3126   Prime Path   
+ 1 / 3 Problem E POJ 3083   Children of the Candy Corn  
