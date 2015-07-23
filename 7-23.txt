@@ -1,0 +1,5 @@
+ 14 / 55 Problem A POJ 1338   A   
+ 2 / 18 Problem B POJ 1786   B   
+ 5 / 24 Problem C POJ 1328   C   
+ 8 / 63 Problem D URAL 1010   D   
+ 5 / 26 Problem E URAL 1118   E  
