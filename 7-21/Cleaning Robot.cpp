@@ -5,16 +5,25 @@
 using namespace std;
 
 char map[30][30];
-int vis[30][30][4];
+int vis[30][30];
+int dis[30][30];
 int w,h;
-int all;
+int cnt;
+int ok;
+int ans;
 
-int dirX[]= {-1,0,1,-1,1,-1,0,1};
-int dirY[]= {1,1,1,0,0,-1,-1,-1};
+int dirX[]= {-1,0,1,0};
+int dirY[]= {0,1,0,-1};
+
+struct point
+{
+    int x;
+    int y;
+} p[15];
 
 bool inmap(int x,int y)
 {
-    if(x>w||y>h||x<=0||y<=0)
+    if(x>h||y>w||x<=0||y<=0)
         return false;
     return true;
 }
@@ -24,61 +33,113 @@ struct que
     int x;
     int y;
     int step;
-    int sum;
-    int dir;
 };
 
-int solv(int x,int y)
+int bfs(int x,int y,int s,int e)
 {
+    memset(vis,0,sizeof(vis));
+
     queue <que> q;
-    q.push(que {x,y,0,0,-1});
+    q.push(que {x,y,0});
+    que temp;
+
     while(!q.empty())
     {
-         que temp=q.front();
-         q.pop();
+        temp=q.front();
+        q.pop();
 
-         vis[temp.x][temp.y][temp.dir]=1;
-
-         if(map[temp.x][temp.y]=='*')
-            temp.sum=temp.sum+1;
-
-         if(temp.sum==all)
+        if(temp.x==s&&temp.y==e)
             return temp.step;
 
-         int Ix,Iy;
-         for(int i=0;i<8;i++)
-         {
-             Ix=temp.x+dirX[i];
-             Iy=temp.y+dirY[i];
-             if(inmap(Ix,Iy)&&!vis[Ix][Iy][i])
-                q.push(que{Ix,Iy,temp.step+1,temp.sum,i});
-         }
+        int Ix,Iy;
+        for(int i=0; i<4; i++)
+        {
+            Ix=temp.x+dirX[i];
+            Iy=temp.y+dirY[i];
+            if(inmap(Ix,Iy)&&map[Ix][Iy]!='x'&&!vis[Ix][Iy])
+            {
+                vis[Ix][Iy]=1;
+                q.push(que {Ix,Iy,temp.step+1});
+            }
+
+        }
     }
+
     return -1;
 }
+
+
+int viss[15];
+void dfs(int k,int n,int sum)
+{
+    if(sum>ans)
+        return;
+
+    if(n==cnt+1)
+    {
+        ans=min(ans,sum);
+        return;
+    }
+    for(int i=1; i<=cnt; i++)
+        if(!viss[i])
+        {
+            viss[i]=1;
+            dfs(i,n+1,sum+dis[k][i]);
+            viss[i]=0;
+        }
+}
+
 int main()
 {
-    while(cin >> w >> h)
+    while(cin >> w >> h && (w||h))
     {
-        if(w==0&&h==0)
-            break;
-        all=0;
-        int x,y;
-        memset(map,0,sizeof(map));
-        memset(vis,0,sizeof(vis));
-        for(int j=1; j<=h; j++)
-            for(int i=1; i<=w; i++)
+        cnt=0;
+        ok=1;
+        ans=999999999;
+        for(int i=1; i<=h; i++)
+            for(int j=1; j<=w; j++)
             {
                 cin >> map[i][j];
-                if(map[i][j]=='*')
-                    all++;
                 if(map[i][j]=='o')
                 {
-                    x=i;
-                    y=j;
+                    p[0].x=i;
+                    p[0].y=j;
+                }
+                if(map[i][j]=='*')
+                {
+                    p[++cnt].x=i;
+                    p[cnt].y=j;
                 }
             }
-        cout << solv(x,y) << endl;
+        //cout <<cnt << endl;
+        for(int i=0; i<=cnt; i++)
+        {
+            if(!ok)
+                break;
+            for(int j=i+1; j<=cnt; j++)
+            {
+                dis[i][j]=dis[j][i]=bfs(p[i].x,p[i].y,p[j].x,p[j].y);
+                //cout << dis[i][j] << endl;
+                if(dis[i][j]==-1)
+                {
+                    ok=0;
+                    break;
+                }
+            }
+        }
+
+        if(!ok)
+        {
+            cout << "-1" << endl;
+            continue;
+        }
+
+
+            memset(viss,0,sizeof(viss));
+            viss[0];
+            dfs(0,1,0);
+
+        cout << ans << endl;
     }
     return 0;
 }
