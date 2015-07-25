@@ -2,6 +2,7 @@
 #include <cstring>
 using namespace std;
 
+/*
 int N;
 int map[20][20];
 int vis[20][20];
@@ -60,3 +61,100 @@ int main()
     }
     return 0;
 }
+*/
+
+int N;
+int map[15][15];
+
+int main()
+{
+    int T=0;
+    while(cin >> N && N)
+    {
+        T++;
+        for(int i=1; i<=N; i++)
+            for(int j=1; j<=N; j++)
+                cin >> map[i][j];
+
+        cout << "Case "<< T << ":" << endl << endl;
+
+        for(int i=0; i<4*N+3; i++)
+            cout << "*";
+        cout << endl;
+
+
+
+        cout << "*";
+
+        for(int i=1; i<=N; i++)
+        {
+            cout << "H";
+            if(map[1][i]==1)
+                cout << "-O-";
+            else if(map[1][i+1]==1)
+                cout << "-O ";
+            else
+                cout << " O-";
+        }
+        cout << "H*" << endl;
+
+
+        for(int k=2; k<=N; k++)
+        {
+            cout << "*";
+            for(int j=1; j<=N; j++)
+            {
+                cout << " ";
+                if(map[k-1][j]==1)
+                    cout << "   ";
+                else if(map[k][j]==1)
+                    cout << " | ";
+                else
+                    cout << " | ";
+            }
+            cout << " *" << endl;
+
+            cout << "*";
+            for(int j=1; j<=N; j++)
+            {
+                cout << " ";
+                cout << " H ";
+            }
+            cout << " *" << endl;
+
+            cout << "*";
+            for(int j=1; j<=N; j++)
+            {
+                cout << " ";
+                if(map[k][j]==-1)
+                    cout << " | ";
+                else if(map[k-1][j]==1)
+                    cout << " | ";
+                else if(map[k][j]==1)
+                    cout << "   ";
+                else
+                    cout << "   ";
+            }
+            cout << " *" << endl;
+
+            cout << "*";
+            for(int j=1; j<=N; j++)
+            {
+                cout << "H";
+                if(map[k][j]==1)
+                    cout << "-O-";
+                else if(map[k][j]==-1)
+                    cout << " O ";
+                else if(map[k][j+1]==1)
+                    cout << "-O ";
+                else if(map[k][j-1]==1)
+                    cout << " O-";
+                else
+                    cout << " O ";
+            }
+            cout << "H*" << endl;
+        }
+    }
+    return 0;
+}
+

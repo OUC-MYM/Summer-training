@@ -17,7 +17,7 @@ bool bigmul(int i)
         yu=temp/10;
         toch[j]=temp%10+'0';
     }
-    cout << toch << endl;
+    //cout << toch << endl;
     if(yu/10>0)
     {
         return false;
