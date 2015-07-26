@@ -1,0 +1,10 @@
+ 17 / 36 Problem A CodeForces 499A   Watching a movie   
+ 15 / 18 Problem B CodeForces 499B   Lecture   
+ 4 / 19 Problem C CodeForces 499C   Crazy Town   
+ 6 / 37 Problem D HDU 2660   Accepted Necklace   
+ 4 / 7 Problem E HDU 2661   BrokenLED   
+ 4 / 11 Problem F HDU 3368   Reversi   
+ 14 / 34 Problem G POJ 1611   The Suspects   
+ 7 / 16 Problem H HDU 1072   Nightmare   
+ 2 / 23 Problem I HDU 4662   MU Puzzle   
+ 12 / 48 Problem J HDU 4551  ÉúÈÕ²Â²Â²Â  
