@@ -1,0 +1,28 @@
+质因数分解。
+n/k+n/k/k+n/k/k/k...........
+对换
+a%m==b%m等价(a-b)%m==0
+解同余方程
+GCD
+扩展欧几里德  a*x+b*y=n(a,b,n已知）
+int exGCD(int a,int b,int &x,int &y)
+{
+    if(b==0)
+    {
+        x=1;
+        y=0;
+        return a;
+    }
+    int r=exGCD(b,a%b,x,y);
+    int t=x;
+    x=y;
+    y=t-a/b*y;
+    return r;    //r==GCD(a,b)
+}
+
+ 11 / 15 Problem A HDU 1124   Factorial   
+ 9 / 13 Problem B HDU 1214  圆桌会议   
+ 10 / 26 Problem C HDU 1319   Prime Cuts   
+ 8 / 8 Problem D HDU 1576   A/B   
+ 13 / 42 Problem E HDU 2161   Primes  
+
