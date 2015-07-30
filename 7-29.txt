@@ -1,0 +1,13 @@
+中国剩余定理
+M=m1*m2*m3*m4......
+Mi=M/mi
+tiMi=1(mod mi)
+x=a1*t1*M1+a2*t2*M2........
+
+欧拉函数
+enlerFun(q)=q-1;
+enlerFun(q1*q2)=(q1-1)*(q2-1);
+
+组合数
+C[j][i]=C[j-1][i-1]+C[j][i-1]
+C[j][i]=(j!)/(j!*(i-j)!)

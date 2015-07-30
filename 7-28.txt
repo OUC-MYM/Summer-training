@@ -1,0 +1,68 @@
+快速幂
+int pow2(inta,intb)
+{
+int r=1,base=a;
+while(b!=0)
+{
+if(b%2)
+r*=base;
+base*=base;
+b/=2;
+}
+return r;
+}
+intpow3(inta,intb)
+{
+intr=1,base=a;
+while(b!=0)
+{
+if(b&1)
+r*=base;
+base*=base;
+b>>=1;
+}
+return r;
+}
+
+矩阵乘法
+Matrix POW( Matrix t,int k )
+
+{
+
+       if( k == 1 )
+
+           return t;
+
+       Matrix t1 = POW( t, k/2 );
+
+       t1 = t1*t1;
+
+       if( k & 1 )
+
+           return t1 * t;
+
+       else
+
+           return t1;
+
+}
+Matrix Pow(Matrix a,Matrix b,int x){
+    while(x){
+        if(x&1){
+            b=Mul(b,a);
+        }
+        x>>=1;
+        a=Mul(a,a);
+    }
+    return b;
+}
+
+
+ 13 / 28 Problem A POJ 1061  青蛙的约会   
+ 11 / 28 Problem B POJ 1006  （中国剩余定理）   
+ 1 / 1 Problem C POJ 3146   Interesting Yang Hui Triangle   
+  Problem D POJ 3147   John's Canonical Difference Bound Matrices   
+ 0 / 7 Problem E POJ 2480   Longge's problem   
+ 1 / 6 Problem F POJ 1809   Regetni  
+
+

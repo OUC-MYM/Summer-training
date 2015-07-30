@@ -1,9 +1,17 @@
 质因数分解。
 n/k+n/k/k+n/k/k/k...........
+
 对换
+
 a%m==b%m等价(a-b)%m==0
 解同余方程
+
 GCD
+int gcd(int a,int b)
+{
+    return (b>0)?gcd(b,a%b):a;
+}
+
 扩展欧几里德  a*x+b*y=n(a,b,n已知）
 int exGCD(int a,int b,int &x,int &y)
 {
