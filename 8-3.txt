@@ -1,0 +1,16 @@
+ DP 动态规划
+01背包问题
+完全背包问题
+多重背包问题
+
+ 子问题状态方程式
+
+动态规划与搜索
+
+
+
+ 11 / 16 Problem A POJ 1664   A      dp[i][j]=dp[i][j-1]+dp[i-j][j]
+  Problem B HDU 1227   B             dp[i][j]=min{dp[i][j],dp[k][j-1]+dis[k+1][i]}
+ 11 / 29 Problem C HDU 2955   C      01概率背包
+ 10 / 16 Problem D HDU 2089   D      数位DP
+  Problem E POJ 1185   E           状态DP

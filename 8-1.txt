@@ -1,0 +1,10 @@
+ 15 / 111 Problem A HDU 2054   A-easy   
+ 1 / 8 Problem B HDU 2155   B-diffcult   
+ 5 / 10 Problem C POJ 1753   C-easy   
+ 4 / 8 Problem D POJ 2965   D-diffcult   
+ 9 / 29 Problem E HDU 1166   E-easy   
+ 3 / 16 Problem F CodeForces 559B   F-diffcult   
+ 1 / 6 Problem G POJ 1157   G-easy   
+ 3 / 13 Problem H POJ 1274   H-diffcult   
+ 13 / 33 Problem I HDU 1060   I-easy   
+ 2 / 6 Problem J ZOJ 3057   J-diffcult  

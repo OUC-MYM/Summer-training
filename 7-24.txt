@@ -5,3 +5,11 @@
  11 / 12 Problem C HDU 2952   Counting Sheep   
  4 / 54 Problem D HDU 1518   Square   
  4 / 16 Problem E HDU 1258   Sum It Up  
+
+
+ 13 / 26 Problem A POJ 1028   Web Navigation   
+ 10 / 17 Problem B POJ 1047   Round and Round We Go   
+ 5 / 13 Problem C POJ 1099   Square Ice   
+ 7 / 23 Problem D POJ 1102   LC-Display   
+ 7 / 15 Problem E POJ 1107   W's Cipher  
+
