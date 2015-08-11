@@ -1,0 +1,10 @@
+ 0 / 7 Problem A HDU 1505   A   
+ 4 / 10 Problem B HDU 1506   B   
+ 6 / 24 Problem C HDU 2577   C     开关DP
+  Problem D HDU 3709   D   
+ 1 / 18 Problem E HDU 1513   E     最长公共子序列
+
+
+ 插头DP （回路）
+ 分组DP
+ 树形DP

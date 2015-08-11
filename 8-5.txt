@@ -1,0 +1,7 @@
+ 14 / 40 Problem A HDU 1009   A   
+ 15 / 54 Problem B HDU 1257   B   
+  Problem C URAL 1519   C   
+ 16 / 20 Problem D HDU 2040   D   
+ 8 / 14 Problem E HDU 1143   E   
+ 6 / 9 Problem F HDU 1207   F   
+ 5 / 43 Problem G HDU 1567   G  

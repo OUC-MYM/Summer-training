@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 using namespace std;
 
 int ans;
@@ -15,7 +14,7 @@ void build(int left,int right,int root)
     tree[root].right=right;
     if(left==right)
     {
-        scanf("%d",&tree[root].sum);
+        cin >> tree[root].sum;
         return;
     }
     int mid=(tree[root].left+tree[root].right)/2;
@@ -63,6 +62,7 @@ void change(int left,int right,int root,int pos,int num)
 
 int main()
 {
+    cin.sync_with_stdio(false);
     int T,N=0;
     cin >> T;
     while(T--)
@@ -75,17 +75,17 @@ int main()
         build(1,n,1);
 
         char cmd[20];
-        while(~scanf("%s",cmd))
+        while(cin >> cmd)
         {
             if(cmd[0]=='E')
                 break;
             int a,b;
-            scanf("%d %d",&a,&b);
+            cin >> a >> b;
             if(cmd[0]=='Q')
                 {
                     ans=0;
                     query(1,n,1,a,b);
-                    printf("%d\n",ans);
+                    cout << ans << endl;
                 }
             if(cmd[0]=='S')
                 change(1,n,1,a,-b);
