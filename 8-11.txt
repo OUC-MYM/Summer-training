@@ -1,0 +1,6 @@
+ 6 / 21 Problem A HDU 2795   Billboard   
+ 7 / 41 Problem B POJ 3468   A Simple Problem with Integers   
+  Problem C CodeForces 19D   Points   
+ 5 / 12 Problem D POJ 2828   Buy Tickets   
+  Problem E CodeForces 343D   Water Tree   
+  Problem F HDU 5338   ZZX and Permutations  
