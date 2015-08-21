@@ -10,28 +10,31 @@
 #include <set>
 #define PI 3.1415926
 #define INF 0x3f3f3f3f
-#define MAX 5500
+#define MAX 250
 using namespace std;
 
-int N,M,W;
+int N,M,S;
+double V;
 
-int vis[MAX];
-int d[MAX];
+bool vis[MAX];
+double d[MAX];
 int head[MAX];
 int cnt;
-int w[MAX];
+
 struct Edge
 {
     int v;
     int next;
-    int w;
+    double w;
+    double miss;
 } e[MAX];
 
-void addEdge(int u, int v, int w)
+void addEdge(int u, int v, double w,double miss)
 {
     e[cnt].v = v;
     e[cnt].next = head[u];
     e[cnt].w = w;
+    e[cnt].miss = miss;
     head[u] = cnt++;
 }
 
@@ -39,13 +42,13 @@ int SPFA(int src)
 {
     int u, v;
     memset(vis, 0, sizeof(vis));
-    memset(d, INF, sizeof(d));
-    d[src] = 0;
+    memset(d, 0, sizeof(d));
+    d[src] = V;
     queue<int> Q;
     Q.push(src);
     while(!Q.empty())
     {
-        if(d[1]<0)
+        if(d[src]>V)
             return 1;
         u = Q.front();
         Q.pop();
@@ -53,9 +56,9 @@ int SPFA(int src)
         for(int i = head[u]; i != -1; i = e[i].next)
         {
             v = e[i].v;
-            if(d[v] > d[u] + e[i].w)
+            if(d[v] < (d[u]-e[i].miss) * e[i].w)
             {
-                d[v] = d[u] + e[i].w;
+                d[v] = (d[u]-e[i].miss) * e[i].w;
                 if(!vis[v])
                 {
                     Q.push(v);
@@ -71,28 +74,20 @@ int SPFA(int src)
 int main()
 {
     cin.sync_with_stdio(false);
-    int T;
-    cin >> T;
-    while(T--)
+    while(cin >> N >> M >> S >> V)
     {
-        cin >> N >> M >> W;
         memset(head, -1, sizeof(head));
         cnt=0;
         for(int i=1; i<=M; i++)
         {
-            int a,b,c;
-            cin >> a >> b >> c;
-            addEdge(a,b,c);
-            addEdge(b,a,c);
-        }
-        for(int i=1; i<=W; i++)
-        {
-            int a,b,c;
-            cin >> a >> b >> c;
-            addEdge(a,b,-c);
+            int a,b;
+            double c,d,e,f;
+            cin >> a >> b >> c >> d >> e >> f;
+            addEdge(a,b,c,d);
+            addEdge(b,a,e,f);
         }
 
-        cout << (SPFA(1)?"YES":"NO") << endl;
+        cout << (SPFA(S)?"YES":"NO") << endl;
     }
     return 0;
 }
