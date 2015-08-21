@@ -6,3 +6,11 @@
 
 强连通分量   tarjn
 
+
+
+ 4 / 19 Problem A HDU 1811   Rank of Tetris   
+ 7 / 41 Problem B HDU 4324   Triangle LOVE   
+ 11 / 22 Problem C HDU 1285   =。=   
+ 1 / 3 Problem D HDU 2489   Minimal Ratio Tree   
+ 11 / 17 Problem E HDU 1301   Jungle Roads  
+

@@ -1,0 +1,5 @@
+ 9 / 44 Problem A POJ 2446   Chessboard   
+ 8 / 17 Problem B POJ 2239   Selecting Courses   
+ 8 / 22 Problem C POJ 2536   Gopher II   
+ 7 / 8 Problem D POJ 3041   Asteroids   
+ 6 / 29 Problem E POJ 3216   Repairing Company  

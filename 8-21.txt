@@ -1,0 +1,17 @@
+ 1 / 1 Problem A POJ 1149   PIGS   
+ 1 / 1 Problem B POJ 1637   Sightseeing tour   
+  Problem C POJ 2391   Ombrophobic Bovines   
+  Problem D POJ 2699   The Maximum Number of Strong Kings   
+ 1 / 1 Problem E POJ 3281   Dining  
+
+
+
+ 2 / 2 Problem A  Silver Cow Party   
+ 2 / 15 Problem B  Invitation Cards   
+ 1 / 4 Problem C  Candies   
+ 1 / 2 Problem D  Big Christmas Tree   
+  Problem E  Sightseeing Cows   
+ 1 / 2 Problem F  Wormholes   
+ 2 / 9 Problem G  Arbitrage   
+ 4 / 9 Problem H  Til the Cows Come Home   
+  Problem I  Currency Exchange  

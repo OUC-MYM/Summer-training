@@ -1,0 +1,17 @@
+KM 完全二分图
+
+EK 稀图
+Dinic 密图
+SAP
+
+强连通分量  tarjan
+
+最长回文子串   Manacher算法
+
+
+0 / 7 Problem A HDU 5294   dinic+dij   
+ 7 / 13 Problem B HDU 1269   tarjan   
+ 8 / 12 Problem C HDU 1273   dinic   
+ 4 / 7 Problem D HDU 2255   km   
+ 5 / 16 Problem E POJ 3974   manacher   
+ 2 / 8 Problem F POJ 3281   dinic  

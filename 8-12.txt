@@ -1,0 +1,7 @@
+ 12 / 13 Problem A HDU 1232  畅通工程   
+ 12 / 28 Problem B HDU 1233  还是畅通工程   
+ 11 / 11 Problem C HDU 1213   How Many Tables   
+ 11 / 40 Problem D HDU 1856   More is better   
+ 10 / 39 Problem E HDU 1272  小希的迷宫   
+ 8 / 14 Problem F HDU 1198   Farm Irrigation   
+ 9 / 18 Problem G POJ 1182  食物链  

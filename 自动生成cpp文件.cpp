@@ -50,6 +50,7 @@ int main()
         file << "using namespace std;" << endl << endl << endl;
         file << "int main()" << endl;
         file << "{" << endl;
+        file << "   cin.sync_with_stdio(false);" << endl;
         file << "   int T;" << endl;
         file << "   cin >> T;" << endl;
         file << "   while(T--)" << endl;
