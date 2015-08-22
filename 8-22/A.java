@@ -5,14 +5,11 @@ public class Main{
 		Scanner cin = new Scanner(System.in);
 		BigInteger a, b, ans;
 		int k;
-		String aa,bb;
 		k= cin.nextInt();
 		for(int i=1;i<=k;i++)
 		{
-			aa=cin.next();
-			bb=cin.next();
-			a = new BigInteger(aa,2);
-			b = new BigInteger(bb,2);
+			a = cin.nextBigInteger(2);
+			b = cin.nextBigInteger(2);
 			//System.out.println(a);
 			//System.out.println(b);
 			ans = a.gcd(b);
