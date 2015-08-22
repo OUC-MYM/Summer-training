@@ -1,0 +1,6 @@
+ 3 / 7 Problem A HDU 5050   Divided Land   
+ 2 / 3 Problem B HDU 5047   Sawtooth   
+ 6 / 14 Problem C HDU 1041   Computer Transformation   
+ 2 / 8 Problem D HDU 5360   Hiking   
+ 2 / 19 Problem E HDU 2222   Keywords Search   
+ 11 / 11 Problem F HDU 2009  求数列的和  

@@ -32,6 +32,12 @@ int main()
     for(char i='A'; i<'A'+T; i++)
     {
         name[0]=i;
+        ifstream read(name);
+        if(read)
+        {
+            cout << name << " 已经存在" << endl;
+            continue;
+        }
         ofstream file(name);
         if(file)
             cout << "成功创建 " << name << " 文件" << endl;
@@ -46,7 +52,8 @@ int main()
         file << "#include <vector>" << endl;
         file << "#include <set>" << endl;
         file << "#define PI 3.1415926" << endl;
-        file << "#define INF 1<<30" << endl;
+        file << "#define INF 0x3f3f3f3f" << endl;
+        file << "#define MAXN 2500" << endl;
         file << "using namespace std;" << endl << endl << endl;
         file << "int main()" << endl;
         file << "{" << endl;

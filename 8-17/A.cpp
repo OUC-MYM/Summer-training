@@ -13,13 +13,15 @@ using namespace std;
 
 
 int N,M,sum,flag;
-int pre[MAXN];
+int pre[MAXN],in[MAXN];
+vector<int>map[10005];
 struct point
 {
     int a;
     char ch;
     int b;
 } p[MAXN];
+
 
 int find (int x)
 {
@@ -29,91 +31,88 @@ int find (int x)
 }
 
 
-
-int tuoposort(int n,int mat[][sum])
+void topo(int n)
 {
-    int d[sum],i,j,k;
-
-    for(i=0; i<n; i++)
-        for(d[i]=j=0; j<n; d[i]+=mat[j++][i])
-            ;
-
-    for(k=0; k<n; k++)
+    queue<int> q;
+    for(int i=0; i<n; i++)
     {
-        int cnt=0;
-        for(i=0; i<n; i++)
-        {
-            if(d[i]==0)
-                cnt++;
-            if(cnt>1)
-            {
-                flag=1;
-                break;
-            }
-        }
-        for(i=0; d[i]&&i<n; i++)
-            ;
-        if(i==n)
-            return 0;
-        for(d[i]=-1,j=0; j<n; j++)
-            d[j]-=mat[i][j];
+        if(in[i]==0&&pre[i]==i)
+            q.push(i);
     }
-    return 1;
+    while(!q.empty())
+    {
+        if(q.size()>1)
+            flag=1;
+        int v=q.front();
+        q.pop();
+        sum--;
+        for(int i=0; i<map[v].size(); i++)
+        {
+            in[map[v][i]]--;
+            if(!in[map[v][i]])
+                q.push(map[v][i]);
+        }
+    }
 }
 
-void unions(int x,int y)
+bool unions(int x,int y)
 {
     x=find(x);
     y=find(y);
-    if(x!=y)
-        pre[x]=y;
+    if(x==y)
+        return 0;
+    pre[y]=x;
+    return 1;
 }
 
 
 int main()
 {
+    cin.sync_with_stdio(false);
     while(cin >> N >> M)
     {
-        flag=0;
-
+        sum=N;
         for(int i=0; i<N; i++)
             pre[i]=i;
+        memset(map,0,sizeof(map));
+        memset(in,0,sizeof(in));
 
-        sum=0;
-
-        for(int i=1; i<=M; i++)
+        for(int i=0; i<M; i++)
         {
-            int a,b;
-            char ch;
-            cin >> a >> ch >> b;
-            if(ch=='=')
-                unions(a,b);
-            p[sum].a=a;
-            p[sum].ch=ch;
-            p[sum++].b=b;
+            cin >> p[i].a >> p[i].ch >> p[i].b;
+            if(p[i].ch=='=')
+            {
+                if(unions(p[i].a,p[i].b))
+                    sum--;
+            }
         }
 
-        int map[sum][sum];
-        memset(map,0,sizeof(map));
-
-
-        for(int i=0; i<sum; i++)
+        for(int i=0; i<M; i++)
         {
             if(p[i].ch=='=')
                 continue;
+            int x=find(p[i].a);
+            int y=find(p[i].b);
             if(p[i].ch=='>')
-                map[pre[p[i].a]][pre[p[i].b]]=1;
+            {
+                map[x].push_back(y);
+                in[y]++;
+            }
             if(p[i].ch=='<')
-                map[pre[p[i].b]][pre[p[i].a]]=1;
+            {
+                map[y].push_back(x);
+                in[x]++;
+            }
         }
+        flag=0;
+        topo(N);
 
-        bool check=tuoposort(sum,map);
-        if(!flag&&check)
-            cout << "OK" << endl;
-        else if(flag&&check)
+        if(sum>0)
+            cout << "CONFLICT" << endl;
+        else if(flag)
             cout << "UNCERTAIN" << endl;
         else
-            cout << "CONFLICT" << endl;
+            cout << "OK" << endl;
     }
     return 0;
 }
